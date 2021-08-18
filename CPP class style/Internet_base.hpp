@@ -151,15 +151,6 @@ namespace _internet_base {
 		WORD& get_port();
 		DWORD& get_Event();
 		HWND& get_Hwnd();
-
-
-		//smart_set() 
-		/*void smart_set(SOCKET& psockfd, WORD& Port, DWORD& EVENT, HWND& Hwnd);
-		void smart_set(SOCKET& psockfd);
-		void smart_set(WORD& Port);
-		void smart_set(DWORD& EVENT);
-		void smart_set(HWND& Hwnd);*/
-
 	};
 
 	Internet_base_plug::Internet_base_plug() {
@@ -250,22 +241,6 @@ namespace _internet_base {
 	void Internet_base_plug::set_Hwnd(HWND& Hwnd) {
 		This.Hwnd = Hwnd;
 	}
-
-	/*void Internet_base_plug::smart_set(SOCKET& psockfd, WORD& Port, DWORD& EVENT, HWND& Hwnd) {
-		This.set_all(psockfd, Port, EVENT, Hwnd); 
-	}
-	void Internet_base_plug::smart_set(SOCKET& psockfd) {
-		This.set_socket(psockfd); 
-	}
-	void Internet_base_plug::smart_set(WORD& Port) {
-		This.set_port(Port); 
-	}
-	void Internet_base_plug::smart_set(DWORD& EVENT) {
-		This.set_event(EVENT); 
-	}
-	void Internet_base_plug::smart_set(HWND& Hwnd) {
-		This.set_Hwnd(Hwnd); 
-	}*/
 
 	// get 
 	SOCKET& Internet_base_plug::get_socket() {
