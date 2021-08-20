@@ -2,7 +2,7 @@
 
 This is a TCPIP Tool 
 
-It is easily to built a thing about sever 
+It is easily to built a thing about server 
 
 Internet base is a base class for build a internet thing like TCP or UDP 
 
