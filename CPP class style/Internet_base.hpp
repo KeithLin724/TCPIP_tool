@@ -50,9 +50,6 @@ namespace _internet_base {
 		void set_wsadata(WSADATA& wsadata);
 		void set_tcp_udp(sockaddr_in& tcp_udp);
 
-		//smart_set 
-		void smart_set(WSADATA& wsadata);
-		void smart_set(sockaddr_in& tcp_udp);
 
 		// get
 		WSADATA& get_wsadata();
@@ -98,14 +95,6 @@ namespace _internet_base {
 		This.tcp_udp = tcp_udp;
 	}
 
-	//smart set 
-
-	void Internet_base::smart_set(WSADATA& wsadata) {
-		This.set_wsadata(wsadata); 
-	}
-	void Internet_base::smart_set(sockaddr_in& tcp_udp) {
-		This.set_tcp_udp(tcp_udp); 
-	}
 
 	// get
 	WSADATA& Internet_base::get_wsadata() {
@@ -148,9 +137,10 @@ namespace _internet_base {
 
 		// get 
 		SOCKET& get_socket();
-		WORD& get_port();
+		WORD&  get_port();
 		DWORD& get_Event();
 		HWND& get_Hwnd();
+
 	};
 
 	Internet_base_plug::Internet_base_plug() {
