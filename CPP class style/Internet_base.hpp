@@ -115,7 +115,7 @@ namespace _internet_base {
 		HWND Hwnd;
 	protected:
 		int open_Winsock();
-		int Set_Asynchronized_Mode(long l_Mode);
+		int set_Asynchronized_Mode(long l_Mode);
 		void set_Socket_nameing(u_long S_addr);
 		void set_Socket_nameing(std::string IP);
 
@@ -170,7 +170,7 @@ namespace _internet_base {
 		return _SUCCESS_;
 	}
 
-	int Internet_base_plug::Set_Asynchronized_Mode(long l_Mode) {
+	int Internet_base_plug::set_Asynchronized_Mode(long l_Mode) {
 		if ((This.err = WSAAsyncSelect(This.psockfd, This.Hwnd, This.EVENT, l_Mode)) < 0) {
 			This.WSA_Get_ErrTxt(This.API_ErrMsg);
 			return _SET_ASYNCHRONIZED_MODE_ERROR_;
